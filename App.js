@@ -26,7 +26,6 @@ function createMovieFile(movies){
      Promise.all(promises).then(results=>{
         const moviesInfo = getMovieInfo(results)
         createFile("moviesInfo",JSON.stringify(moviesInfo))
-        console.log(moviesInfo)
      }
     ).catch((err) => {  console.error("There was problem retrieving data.", err)})
 
